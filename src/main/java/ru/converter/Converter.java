@@ -2,7 +2,7 @@ package ru.converter;
 
 public class Converter {
     public static float rubleToEuro(float value) {
-        float rsl = value / 70;
+        float rsl = value / 100;
         return rsl;
     }
 
