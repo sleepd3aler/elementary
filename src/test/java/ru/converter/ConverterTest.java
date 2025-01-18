@@ -53,4 +53,23 @@ class ConverterTest {
         float eps = 0.1f;
         assertThat(outInEuros).isEqualTo(expectedInEuros, withPrecision(eps));
     }
+
+    @Test
+    void whenConvert1000000DollarsThen11111dot11Dlr() {
+        float in = 1000000;
+        float expectedInDollars = 11111.11111111f;
+        float outInDollars = rubleToDollar(in);
+        float eps = 0.01f;
+        assertThat(outInDollars).isEqualTo(expectedInDollars, withPrecision(eps));
+    }
+
+    @Test
+    void whenConvert180EurosThen1dot8IsMoreThanInDlrs() {
+        float in = 180;
+        float expectedInEuros = 1.8f;
+        float outInEuros = rubleToEuro(in);
+        float eps = 0.1f;
+        float outInDollars = rubleToDollar(in);
+        assertThat(outInEuros).isLessThan(outInDollars);
+    }
 }
