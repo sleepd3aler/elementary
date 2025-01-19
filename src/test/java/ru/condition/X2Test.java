@@ -18,7 +18,7 @@ public class X2Test {
     }
 
     @Test
-    void whenA1B1C1X1Then1() {
+    void whenA1B1C1X1Then3() {
         int a = 1;
         int b = 1;
         int c = 1;
