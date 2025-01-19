@@ -26,9 +26,9 @@ public class SqAreaTest {
     }
 
     @Test
-    public void whenP10K2S16Square16() {
-        int expected = 16;
-        int p = 10;
+    public void whenP18K2S18Square18() {
+        int expected = 18;
+        int p = 18;
         double k = 2;
         double out = SqArea.square(p, k);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
