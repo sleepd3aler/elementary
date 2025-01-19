@@ -19,7 +19,6 @@ public class PointTest {
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
-    //
     @Test
     void when00toMinus50then5() {
         double expected = 5;
