@@ -57,7 +57,7 @@ class ConverterTest {
     @Test
     void whenConvert1000000DollarsThen11111dot11Dlr() {
         float in = 1000000;
-        float expectedInDollars = 11111.11111111f;
+        float expectedInDollars = 11111.11f;
         float outInDollars = rubleToDollar(in);
         float eps = 0.01f;
         assertThat(outInDollars).isEqualTo(expectedInDollars, withPrecision(eps));

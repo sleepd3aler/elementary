@@ -15,7 +15,7 @@ public class Converter {
         float in = 140;
         float expectedInEuros = 1.4f;
         float expectedInDollars = 1.5555556f;
-        float outInEuros = Converter.rubleToEuro(in);
+        float outInEuros = rubleToEuro(in);
         float outInDollars = rubleToDollar(in);
         boolean passed = expectedInEuros == outInEuros;
         boolean passedInDollars = expectedInDollars == outInDollars;
