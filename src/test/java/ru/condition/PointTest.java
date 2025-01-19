@@ -2,9 +2,8 @@ package ru.condition;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.withPrecision;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.withPrecision;
 import static ru.condition.Point.distance;
 
 public class PointTest {
@@ -17,7 +16,7 @@ public class PointTest {
         int x2 = 2;
         int y2 = 0;
         double out = distance(x1, y1, x2, y2);
-        assertEquals(expected, out, 0.01);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
@@ -28,7 +27,7 @@ public class PointTest {
         int x2 = -5;
         int y2 = 0;
         double out = distance(x1, y1, x2, y2);
-        assertEquals(expected, out, 0.01);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
@@ -39,7 +38,7 @@ public class PointTest {
         int x2 = 2;
         int y2 = 2;
         double out = distance(x1, y1, x2, y2);
-        assertEquals(expected, out, 0.01);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
