@@ -1,18 +1,11 @@
-package ru.converter;
+package ru.condition;
 
 import org.junit.jupiter.api.Test;
-import ru.condition.X2;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 public class X2Test {
-/*
-  - a = 1, b = 1, c = 1, x = 1.
-   - a = 0, b = 1, c = 1, x = 1.
-   - a = 1, b = 1, c = 0, x = 1.
-   - a = 1, b = 1, c = 1, x = 0.
 
- */
     @Test
     void wnehA10B0C0X2Then40() {
         int a = 10;
