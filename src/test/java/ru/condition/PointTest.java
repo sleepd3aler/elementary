@@ -1,5 +1,4 @@
 package ru.condition;
-//
 
 import org.junit.jupiter.api.Test;
 
