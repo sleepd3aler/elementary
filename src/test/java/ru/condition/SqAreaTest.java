@@ -16,6 +16,7 @@ public class SqAreaTest {
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
+    //
     @Test
     public void whenP12K2S8Square8() {
         int expected = 8;
