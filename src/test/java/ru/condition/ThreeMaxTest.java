@@ -74,5 +74,5 @@ class ThreeMaxTest {
         int expected = 100;
         assertThat(result).isEqualTo(expected);
     }
-//
+
 }
