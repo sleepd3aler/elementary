@@ -17,12 +17,23 @@ public class CounterTest {
     }
 
     @Test
-    @DisplayName("When Sum From Fifty Five To Twenty Then Who Hundred")
+    @DisplayName("When Sum From  Five To Twenty Then Who Hundred")
     public void whenSumNumbersFromFiveToTwentyThenTwoHundred() {
         int start = 5;
         int end = 20;
         int expected = 200;
         int result = Counter.sum(start, end);
+        assertThat(result).isEqualTo(expected);
+
+    }
+
+    @Test
+    @DisplayName("When Sum Even Numbers From Five To Twenty Then One Hundred Four")
+    public void whenSumEvenNumbersFromFiveToThentyThenOneHundredFour() {
+        int start = 5;
+        int end = 20;
+        int expected = 104;
+        int result = Counter.sumByEven(start, end);
         assertThat(result).isEqualTo(expected);
     }
 }
