@@ -2,10 +2,8 @@ package ru.loop;
 
 public class CheckPrimeNumber {
     public static boolean check(int number) {
-        boolean prime = true;
-        if (number <= 1) {
-            prime = false;
-        }
+        boolean prime = number <= 1 ? true : false;
+
         for (int i = 2; i < number; i++) {
             if (number % 2 == 0) {
                 prime = false;
@@ -17,7 +15,7 @@ public class CheckPrimeNumber {
     }
 
     public static void main(String[] args) {
-        System.out.println(check(5));
+        System.out.println(check(1));
     }
 }
 
