@@ -4,7 +4,10 @@ public class Mortgage {
     public static int year(double amount, int selary, double percent) {
         int year = 0;
         while (amount > 0) {
-            amount = amount + percent;
+            if (percent < 1) {
+                percent *= 100;
+            }
+            amount += amount * percent / 100;
             amount -= selary;
             year++;
         }
@@ -12,6 +15,6 @@ public class Mortgage {
     }
 
     public static void main(String[] args) {
-        System.out.println(year(100, 120, 50));
+        System.out.println(year(100, 120, 0.5));
     }
 }
