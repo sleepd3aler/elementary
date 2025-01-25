@@ -2,16 +2,17 @@ package ru.array;
 
 public class Square {
     public static int[] calculate(int bound) {
-        return new int[bound];
-    }
-
-    public static void main(String[] args) {
-        int[] array = calculate(4);
+        int[] array = new int[bound];
         for (int index = 0; index < array.length; index++) {
             array[index] = (int) Math.pow(index, 2);
         }
-        for (int square : array) {
+        return array;
+    }
+
+    public static void main(String[] args) {
+        for (int square : calculate(4)) {
             System.out.println(square);
         }
     }
 }
+
