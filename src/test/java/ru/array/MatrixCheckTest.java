@@ -45,10 +45,10 @@ public class MatrixCheckTest {
     public void whenNoMonoVertical() {
         char[][] input = {
                 {' ', ' ', 'X'},
-                {' ', ' ', ' '},
                 {' ', ' ', 'X'},
+                {' ', ' ', ' '},
         };
-        int row = 1;
+        int row = 2;
         boolean result = MatrixCheck.monoVertical(input, row);
         assertThat(result).isFalse();
     }
