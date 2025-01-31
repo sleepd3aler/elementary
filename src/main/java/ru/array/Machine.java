@@ -7,9 +7,21 @@ public class Machine {
         int[] coins = {10, 5, 2, 1};
         int[] result = new int[100];
         int size = 0;
-        int i = 0;
         int sum = money - price;
-        while (sum > 0) {
+        if (sum > 0) {
+            for (int i = 0; i < coins.length; ) {
+                if (sum >= coins[i]) {
+                    sum -= coins[i];
+                    result[size] = coins[i];
+                    size++;
+                } else {
+                    i++;
+                }
+
+            }
+        }
+
+       /* while (sum > 0) {
             if (sum >= coins[i]) {
                 sum -= coins[i];
                 result[size] = coins[i];
@@ -17,7 +29,7 @@ public class Machine {
             } else {
                 i++;
             }
-        }
+        }*/
         return Arrays.copyOf(result, size);
     }
 }
